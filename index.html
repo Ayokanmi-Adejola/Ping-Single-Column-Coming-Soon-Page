@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    :root {
+      --blue-500: hsl(223, 87%, 63%);
+      --blue-200: hsl(223, 100%, 88%);
+      --red-400: hsl(354, 100%, 66%);
+      --gray-400: hsl(0, 0%, 59%);
+      --blue-950: hsl(209, 33%, 12%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--blue-950);
+      background-color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      height: 20px;
+    }
+
+    .main-heading {
+      font-size: 1.375rem;
+      font-weight: 300;
+      color: var(--gray-400);
+      margin-bottom: 1rem;
+    }
+
+    .main-heading span {
+      color: var(--blue-950);
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+      color: var(--blue-950);
+      margin-bottom: 2rem;
+    }
+
+    .form-container {
+      margin-bottom: 4rem;
+    }
+
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      align-items: center;
+    }
+
+    .input-container {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .email-input {
+      width: 100%;
+      padding: 0.9375rem 2rem;
+      border: 1px solid var(--blue-200);
+      border-radius: 28px;
+      font-size: 0.75rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .email-input::placeholder {
+      color: var(--blue-200);
+    }
+
+    .email-input:focus {
+      border-color: var(--blue-500);
+    }
+
+    .email-input.error {
+      border-color: var(--red-400);
+    }
+
+    .error-message {
+      color: var(--red-400);
+      font-size: 0.625rem;
+      font-style: italic;
+      margin-top: 0.3125rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .error-message.show {
+      opacity: 1;
+    }
+
+    .submit-btn {
+      background-color: var(--blue-500);
+      color: white;
+      border: none;
+      border-radius: 28px;
+      padding: 0.9375rem 3.9375rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(79, 125, 243, 0.3);
+    }
+
+    .submit-btn:hover {
+      background-color: hsl(223, 87%, 70%);
+      box-shadow: 0 5px 15px rgba(79, 125, 243, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .dashboard-illustration {
+      margin-bottom: 4.5rem;
+    }
+
+    .dashboard-illustration img {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 0.8125rem;
+      margin-bottom: 1.6875rem;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 31px;
+      height: 31px;
+      border: 1px solid var(--blue-200);
+      border-radius: 50%;
+      color: var(--blue-500);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: var(--blue-500);
+      color: white;
+      border-color: var(--blue-500);
+    }
+
+    .copyright {
+      font-size: 0.625rem;
+      color: var(--gray-400);
+      margin-bottom: 2rem;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: var(--gray-400);
+    }
+
+    .attribution a {
+      color: var(--blue-500);
+      text-decoration: none;
+    }
+
+    .attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* Desktop styles */
+    @media (min-width: 768px) {
+      body {
+        padding: 5rem 2rem;
+      }
+
+      .logo {
+        margin-bottom: 2.5rem;
+      }
+
+      .main-heading {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .email-form {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .input-container {
+        flex: 1;
+        max-width: 420px;
+      }
+
+      .submit-btn {
+        flex-shrink: 0;
+        padding: 0.9375rem 3.9375rem;
+      }
+
+      .error-message {
+        text-align: left;
+        margin-left: 2rem;
+      }
+
+      .dashboard-illustration {
+        margin-bottom: 4.5rem;
+      }
+
+      .social-icons {
+        margin-bottom: 1.6875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./images/logo.svg" alt="Ping Logo">
+    </div>
+
+    <!-- Main heading -->
+    <h1 class="main-heading">
+      We are launching <span>soon!</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">Subscribe and get notified</p>
+
+    <!-- Email form -->
+    <div class="form-container">
+      <form class="email-form" id="emailForm" novalidate>
+        <div class="input-container">
+          <input
+            type="email"
+            class="email-input"
+            id="emailInput"
+            placeholder="Your email address..."
+            required
+          >
+          <div class="error-message" id="errorMessage"></div>
+        </div>
+        <button type="submit" class="submit-btn">Notify Me</button>
+      </form>
+    </div>
+
+    <!-- Dashboard illustration -->
+    <div class="dashboard-illustration">
+      <img src="./images/illustration-dashboard.png" alt="Dashboard illustration">
+    </div>
+
+    <!-- Social icons -->
+    <div class="social-icons">
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+
+    <!-- Attribution -->
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Ayokanmi Adejola</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const emailInput = document.getElementById('emailInput');
+      const errorMessage = document.getElementById('errorMessage');
+      const email = emailInput.value.trim();
+
+      // Reset previous error state
+      emailInput.classList.remove('error');
+      errorMessage.classList.remove('show');
+
+      // Validate email
+      if (email === '') {
+        showError('Whoops! It looks like you forgot to add your email');
+        return;
+      }
+
+      // Email format validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showError('Please provide a valid email address');
+        return;
+      }
+
+      // If validation passes, you could submit the form here
+      alert('Thank you! We\'ll notify you when we launch.');
+      emailInput.value = '';
+    });
+
+    function showError(message) {
+      const emailInput = document.getElementById('emailInput');
+      const errorMessage = document.getElementById('errorMessage');
+
+      emailInput.classList.add('error');
+      errorMessage.textContent = message;
+      errorMessage.classList.add('show');
+    }
+
+    // Remove error state when user starts typing
+    document.getElementById('emailInput').addEventListener('input', function() {
+      this.classList.remove('error');
+      document.getElementById('errorMessage').classList.remove('show');
+    });
+  </script>
+</body>
+</html>
