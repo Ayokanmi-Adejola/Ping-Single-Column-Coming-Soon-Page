@@ -5,19 +5,6 @@ A responsive coming soon page with email subscription functionality, built as a 
 ![Design preview for the Ping coming soon page](preview.jpg)
 
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Design Specifications](#design-specifications)
-- [Development Process](#development-process)
-- [Key Learnings](#key-learnings)
-- [Future Enhancements](#future-enhancements)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## 🎯 Overview
 
@@ -171,17 +158,3 @@ ping-coming-soon-page/
 **Ayokanmi Adejola**
 
 - Frontend Mentor: [@Ayokanmi-Adejola](https://www.frontendmentor.io/profile/Ayokanmi-Adejola)
-
-
-## 🙏 Acknowledgments
-
-- [Frontend Mentor](https://www.frontendmentor.io) for providing the design challenge
-- [Google Fonts](https://fonts.google.com) for the Libre Franklin typography
-- [Font Awesome](https://fontawesome.com) for the social media icons
-- The Frontend Mentor community for inspiration and feedback
-
-
----
-
-*This project was built as part of the Frontend Mentor challenge series to improve front-end development skills through realistic projects.*
-# Ping-Single-Column-Coming-Soon-Page
