@@ -155,6 +155,4 @@ ping-coming-soon-page/
 
 ## 👨‍💻 Author
 
-**Ayokanmi Adejola**
-
 - Frontend Mentor: [@Ayokanmi-Adejola](https://www.frontendmentor.io/profile/Ayokanmi-Adejola)
