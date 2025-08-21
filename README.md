@@ -51,7 +51,7 @@ Users should be able to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ayokanmi-Adejola/ping-coming-soon-page.git
+   git clone https://github.com/Ayokanmi-Adejola/Ping-Single-Column-Coming-Soon-Page
    ```
 
 2. Navigate to the project directory:
@@ -152,7 +152,3 @@ ping-coming-soon-page/
 - [ ] Progressive Web App (PWA) features
 - [ ] Dark mode support
 - [ ] Internationalization (i18n) support
-
-## 👨‍💻 Author
-
-- Frontend Mentor: [@Ayokanmi-Adejola](https://www.frontendmentor.io/profile/Ayokanmi-Adejola)
